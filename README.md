@@ -484,3 +484,80 @@ var five = add(two, three);
 15.包装对象类型是object
 
 ```
+
+## 浏览器
+
+### 浏览器对象
+
+**`windows`** 对象不但充当全局作用域，而且表示浏览器窗口
+
+**`innerWidth`** 和 **`innerHeight`** 属性可以获取浏览器窗口的内部宽度和高度
+
+**`outerWidth`** 和 **`outerHeight`** 属性可以获取浏览器窗口的整个宽高
+
+**`navigator`** 对象表示浏览器的信息：
+
+1. `navigator.appName` 浏览器名称 
+
+2. `navigator.appVersion` 浏览器版本
+
+3. `navigator.language` 浏览器设置的语言
+
+4. `navigator.platform` 操作系统的类型
+
+5. `navigator.userAgent`  浏览器设定的 `User-Agent` 字符串
+
+**`screen`** 对象表示屏幕的信息，常用的属性有：
+
+1. `screen.width` 屏幕宽度
+
+2. `screen.height` 屏幕高度
+
+3. `screen.colorDepth` 颜色位数
+
+**`location`** 对象表示当前页面的 url 信息
+
+1. `location.href` 获取完整 url
+
+2. `location.protocol` // 'http'
+
+3. `location.host`   // 'www.example.com'
+
+4. `location.port` // '8080'
+
+5. `location.pathname`  // '/path/index.html'
+
+6. `location.search`  // '?a=1&b=2'
+
+7. `location.hash` // 'TOP'
+
+8. `location.assign()`  // 加载一个新页面
+
+9. `location.reload`  // 刷新页面
+
+**`document`** 表示当前页面，对于 html 在浏览器中以 dom 形式表示为树形结构， `document`对象表示整个 dom 树的根节点
+
+1. `document.title`  从 html 文档的 `<title></title>`读取
+
+2. `document.getElementById()` 和 `document.getElementByTagName` 可以按 id 获得一个 dom 节点 和 按 tag 名称 获得一组节点
+
+3. `document.cookie` 树形，获取当前页面的 Cookie， 设置了`httpOnly`属性的 cookie 无法被 js 获取 cookie
+
+**`history`** 对象保存了浏览器的历史记录--不常用，对于交互丰富的页面，粗暴地前进后退并不友好
+
+1. `history.back()` 浏览器的后退按钮
+
+2. `history.forward()` 浏览器的前进按钮
+
+### 操作 dom
+
+ DOM 操作类型：
+
+ 1. 更新
+
+ 2. 遍历
+
+ 3. 添加
+
+ 4. 删除
+ 
