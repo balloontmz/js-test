@@ -553,11 +553,40 @@ var five = add(two, three);
 
  DOM 操作类型：
 
- 1. 更新
+ 1. 更新 -- 更新该 DOM 节点下的子节点，相当于更新了该 DOM 节点的 HTML 内容
 
- 2. 遍历
+ 2. 遍历 -- 遍历该 DOM 节点下的子节点，以便进行进一步操作
 
- 3. 添加
+ 3. 添加 -- 在该 DOM 节点下新增一个子节点，以便进行下一步操作
 
- 4. 删除
- 
+ 4. 删除 -- 将该节点从 HTML 中删除，相当于删除了该 DOM 节点的内容以及它包含的所有子节点
+
+ #### 方法 
+
+ 需要了解 html 的属性以及 `document` 的一些属性和方法
+
+1. `document.getElementById()`  通过 id 获取唯一的一个 DOM 节点
+
+2. `document.getElementsByTagName()` 通过标签名返回一组 DOM 节点
+
+3. `document.getElementsByClassName()` 通过 CSS 类选择器名获取一组 DOM 节点
+
+4. `DOM.children`   DOM 节点下的直属子节点
+
+#### selector 
+
+需要了解 `selector` 的语法
+
+1. `querySelector()`
+
+2. `querySelectorAll()`
+
+#### 更新 DOM 
+
+1. 修改 innerHTML 属性，这个方式不但能修改一个 DOM 节点的文本内容，还可以直接通过 HTML 片段修改 DOM 节点内部子树
+
+2. 修改 innerText 和 textContent 属性，会自动对字符串进行 HTML 编码，保证无法设置任何 HTML 标签， 二者的区别是：innerText 不返回隐藏元素的文本，而 textContent 返回所有的文本
+
+修改 css
+
+**注意：** css 允许中划线的属性名，javascript 不允许，遇到中划线，要替换成驼峰命名
