@@ -11,7 +11,13 @@
 <body>
     <div id="app">
         {{ message }}<br>
-        <span v-if="seen">Now you see me</span>
+        <span v-if="seen">Now you see me</span><br>
+        <span>--------------------------</span><br>
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
     </div>
     
     <script src="index.js"></script>
